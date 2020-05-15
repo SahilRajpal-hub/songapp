@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StartActivity">
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:id="@+id/songImg"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/musicback"
+        android:layout_marginTop="100dp"/>
+
+    <TextView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/current"
+        android:layout_below="@+id/seekbar"
+        android:textSize="11sp"
+        android:layout_toStartOf="@+id/songImg"
+        android:layout_toLeftOf="@+id/songImg" />
+
+    <TextView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/duration"
+        android:textSize="11sp"
+        android:layout_below="@+id/seekbar"
+        android:layout_toEndOf="@+id/songImg"
+        android:layout_toRightOf="@+id/seekbar" />
+
+    <TextView
+        android:layout_width="170dp"
+        android:layout_height="25dp"
+        android:textAlignment="center"
+        android:id="@+id/songName"
+        android:layout_marginTop="20pt"
+        android:textSize="18sp"
+        android:textColor="#6D6877"
+        android:layout_marginLeft="50pt"
+        android:gravity="center_horizontal" />
+
+
+    <SeekBar
+        android:layout_width="300dp"
+        android:layout_height="15dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/seekbar"
+        android:layout_below="@+id/songImg"
+        android:layout_marginTop="100dp"/>
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="120dp"
+        android:layout_below="@+id/seekbar"
+        android:id="@+id/playStop"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/musicplay"/>
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/seekbar"
+        android:id="@+id/prevSong"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="100dp"
+        app:srcCompat="@android:drawable/ic_media_previous" />
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/seekbar"
+        android:id="@+id/nextsong"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="100dp"
+        android:layout_toRightOf="@+id/playStop"
+        app:srcCompat="@android:drawable/ic_media_next" />
+
+</RelativeLayout>
